@@ -129,6 +129,15 @@ button {
   list-style-type: none;
   padding: 0;
 }
+#displayList {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* see notes below */
+  grid-gap: 1em;
+}
+
 .product-list a {
   text-decoration: none;
   color: var(--dark-grey);
@@ -141,6 +150,20 @@ button {
   border: 1px solid var(--light-grey);
   max-width: 250px;
 }
+.filterOptions {
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#countrySelect,
+#seasonSelect {
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+}
+
 .product-card h2,
 .product-card h3,
 .product-card p {

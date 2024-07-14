@@ -79,3 +79,8 @@ body {
 .match-tile .team {
   width: 100px;
 }
+
+.dataDisplay {
+  display: grid;
+  grid-template-columns: auto atuo auto;
+}

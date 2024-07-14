@@ -1,33 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
     <title>Soccer Live Score</title>
-    <link rel="stylesheet" href="./css/sportstyles.css" />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
+  
 
   <body>
-    <div class="container">
-      <h1>ScoreBoard</h1>
-      <div class="title-box">
-        <p>Local Team</p>
-        <p id="elapsed">45'</p>
-        <p>Visitor Team</p>
-      </div>
-      <div class="title-box">
-        <div class="team">
-          <img id="homeLogo" />
-          <p id="homeName">Team name</p>
-        </div>
-        <p id="goals">3 - 1</p>
-        <div class="team">
-          <img id="awayLogo" />
-          <p id="awayName">Team name</p>
-        </div>
-      </div>
-      <hr />
-      <div id="matchTable" class="matches-table"></div>
-    </div>
-    <script src="./js/main.js"></script>
+
+            </label>
+       <div class="filterOptions">
+        
+        <label> Country:
+            <select id="countrySelect"></select>
+        </label>
+        <label>Season:<select id="seasonSelect"></select></label>
+        
+      </div> 
+        <div id="displayList"></div>
+       <script type="module" src="./js/league.js"></script>
   </body>
 </html>
