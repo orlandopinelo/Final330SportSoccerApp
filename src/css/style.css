@@ -131,11 +131,12 @@ button {
 }
 #displayList {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(250px, 1fr)
-  ); /* see notes below */
+  grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
   grid-gap: 1em;
+}
+#displayList a{
+ text-decoration: none;
+ color: black;
 }
 
 .product-list a {
@@ -143,12 +144,17 @@ button {
   color: var(--dark-grey);
 }
 /* Styles for product lists */
-.product-card {
+.team-card {
   flex: 1 1 45%;
   margin: 0.25em;
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+}
+
+.team-card li {
+  list-style-type: none;
+  color: black;
 }
 .filterOptions {
   display: flex;
@@ -164,9 +170,9 @@ button {
   font-size: 25px;
 }
 
-.product-card h2,
-.product-card h3,
-.product-card p {
+.team-card h2,
+.team-card h3,
+.team-card p {
   margin: 0.5em 0;
 }
 

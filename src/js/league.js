@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function filterAndDisplayLeagues(leagues) {
+  
   const countrySelect = document.querySelector("#countrySelect");
   const seasonSelect = document.querySelector("#seasonSelect");
   const displayList = document.querySelector("#displayList");
@@ -74,6 +75,10 @@ function filterAndDisplayLeagues(leagues) {
     leagueContainer.style.alignItems = "center";
     leagueContainer.style.marginBottom = "10px";
 
+    const leagueCardLink = document.createElement("a")
+    leagueCardLink.href = `../teams/index.html?league=${encodeURIComponent(league.league.id)}`;
+
+
     const logoLeague = document.createElement("img");
     logoLeague.src = league.league.logo;
     logoLeague.alt = `${league.league.name} logo`;
@@ -84,9 +89,15 @@ function filterAndDisplayLeagues(leagues) {
     const leagueName = document.createElement("span");
     leagueName.textContent = league.league.name;
 
-    leagueContainer.appendChild(logoLeague);
-    leagueContainer.appendChild(leagueName);
 
-    displayList.appendChild(leagueContainer);
+    
+    leagueCardLink.appendChild(logoLeague);
+    leagueCardLink.appendChild(leagueName);
+
+  
+
+
+
+    displayList.appendChild(leagueCardLink);
   });
 }
