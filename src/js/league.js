@@ -1,13 +1,16 @@
 import ExternalServices from "./ExternalServices.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
+
+  await loadHeaderFooter();                                            
   const externalServices = new ExternalServices();
   const leaguedata = await externalServices.getLeaguesData();
 
   //get selected elements
   const countrySelect = document.querySelector("#countrySelect");
   const seasonSelect = document.querySelector("#seasonSelect");
-
+ 
   //extract  country and season year
   const leagueCountries = [
     ...new Set(

@@ -2,7 +2,7 @@ const baseURL = import.meta.env.VITE_SERVER_URL;
 
  // Closing curly brace added here
 //import { dbdata } from "./db"; 
-//import { leagusdb } from "./leaguedb";
+import { leagusdb } from "./leaguedb";
 //import { teamdb } from "./teamdb";
 
 
@@ -20,20 +20,20 @@ export default class ExternalServices {
   async getLeaguesData(){
 
     
-    ///const leagueData = leagusdb;
-    ///return leagueData
+    const leagueData = leagusdb;
+    return leagueData
 
-    const options = {
-                   method: "GET",
-                    headers: {
-                          "x-rapidapi-key": "f03592658791198d69b990b1526e4f78",
-                         "x-rapidapi-host": "v3.football.api-sports.io"
-                       }
-                 };
+    // const options = {
+    //                method: "GET",
+    //                 headers: {
+    //                       "x-rapidapi-key": "f03592658791198d69b990b1526e4f78",
+    //                      "x-rapidapi-host": "v3.football.api-sports.io"
+    //                    }
+    //              };
         
-          const response = await fetch(baseURL + `leagues`, options);
-          const data = await convertToJson(response);
-          return data; 
+    //       const response = await fetch(baseURL + `leagues`, options);
+    //       const data = await convertToJson(response);
+    //       return data; 
 
    }
   
