@@ -2,15 +2,14 @@ import ExternalServices from "./ExternalServices.mjs";
 import { loadHeaderFooter } from "./utils.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
-
-  await loadHeaderFooter();                                            
+  await loadHeaderFooter();
   const externalServices = new ExternalServices();
   const leaguedata = await externalServices.getLeaguesData();
 
   //get selected elements
   const countrySelect = document.querySelector("#countrySelect");
   const seasonSelect = document.querySelector("#seasonSelect");
- 
+
   //extract  country and season year
   const leagueCountries = [
     ...new Set(
@@ -78,7 +77,7 @@ function filterAndDisplayLeagues(leagues) {
     leagueContainer.style.marginBottom = "10px";
 
     const leagueCardLink = document.createElement("a");
-    leagueCardLink.className = "team-card"
+    leagueCardLink.className = "team-card";
     leagueCardLink.href = `../teams/index.html?league=${encodeURIComponent(league.league.id)}&season=${encodeURIComponent(slectedSeason)}`;
 
     const logoLeague = document.createElement("img");
