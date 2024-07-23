@@ -6,9 +6,10 @@ import TeamListing from "./TeamListing.mjs";
 document.addEventListener("DOMContentLoaded", async () => {
 await loadHeaderFooter();
 });
+const idSeason = getParams("season");
 const idLeague = getParams("league");         
 const dataSource = new ExternalServices();
 const element = document.querySelector("#displayList");
-const listing = new TeamListing(idLeague, dataSource, element);
+const listing = new TeamListing(idSeason,idLeague, dataSource, element);
 
 listing.init();
