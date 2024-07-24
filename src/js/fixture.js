@@ -1,6 +1,6 @@
 import ExternalServices from "./ExternalServices.mjs";
 import { loadHeaderFooter, getParams } from "./utils.mjs";
-import teamstats from "./teamstats.mjs";
+import FixtureListing from "./FixtureListing.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeaderFooter();
@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const idSeason = getParams("season");
   const idLeague = getParams("league");
   const dataSource = new ExternalServices();
-  const element = document.querySelector("#statisticsdisplayList");
+  const element = document.querySelector("#fixturedisplayList");
 
   if (idTeam && idSeason && idLeague && element) {
-    const listing = new teamstats(
+    const listing = new FixtureListing(
       idTeam,
       idSeason,
       idLeague,

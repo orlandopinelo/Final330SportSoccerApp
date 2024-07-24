@@ -8,17 +8,19 @@ function TeamTemplate(team, idLeague, idSeason) {
         <img src="${team.team.logo}" alt="Image of ${team.team.name}">
         <h2 class="card__name">${team.team.name}</h2>
       </a>
-      <a class = "team_stats" href="../statistics/index.html?id=${team.team.id}&season=${idSeason}&league=${idLeague}">Statistics</a>
-      <a class = "team_players"> Players </a>
-      <a class ="team_fixtures" > Fixtures</a>
+      
+      <a class = "team_stats" href="../fixture/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}"> Fixtures </a>
+      <a class ="team_stats" href="../player/index.html?team=${team.team.id}&season=${idSeason}" > Players</a>
+      <a class = "team_stats" href="../statistics/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}">Statistics</a>
     </li>`;
 }
  
 
 export default class TeamListing {
-  constructor(idSeason,idLeague, dataSource, listElement,) {
+  constructor(idSeason, idLeague, dataSource, listElement,) {
       // We passed in this information to make our class as reusable as possible.
-      // Being able to define these things when we use the class will make it very flexible
+      // Being able to define these things when we use the class will make it very  
+     
     this.idSeason = idSeason;  
     this.idLeague = idLeague;
     this.dataSource = dataSource;
