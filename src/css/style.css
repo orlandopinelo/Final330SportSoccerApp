@@ -169,12 +169,16 @@ button {
   max-width: 250px;
   list-style-type: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
-  transition: transform 0.3s ease-in-out;
+  /*transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
+  transition: background-color 0.3s, box-shadow 0.3s;
+  /*transition: transform 0.3s ease-in-out;*/
 }
 .league-card:hover {
-  background: linear-gradient(90deg, rgba(52, 124, 184, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
-  transform: translateX(20px); /* Slide to the right on hover */
+ /* background: linear-gradient(90deg, rgba(52, 124, 184, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
+ /* transform: translateX(20px); /* Slide to the right on hover */
+ background-color: rgba(226, 226, 231, 0.8);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ cursor: pointer;
 }
 
 .filterOptions {
@@ -183,6 +187,12 @@ button {
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+/* Style for input focus */
+.filterOptions select:focus {
+  border: 2px solid #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05);
 }
 #countrySelect,
 #seasonSelect {
@@ -295,9 +305,32 @@ button {
   margin: 0;
   padding: 10px;
 }
+/* Zebra striping effect */
+.striped .statistics-card div:nth-child(odd) p:nth-child(even) {
+  background-color: #8f8b8b;
+}
+
+.striped .statistics-card div:nth-child(even) p:nth-child(even) {
+  background-color: #8f8b8b;
+}
+
+.striped .statistics-card div:nth-child(odd) p:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.striped .statistics-card div:nth-child(even) p:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+#toggleStriping{
+margin-top: 10px;
+border-radius: 5px;
+}
+#toggleStriping:hover{
+  background-color: #1970e2;
+}
 
 /* Zebra striping */
-.statistics-card div:nth-child(odd) p:nth-child(even) {
+/*.statistics-card div:nth-child(odd) p:nth-child(even) {
   background-color: #8f8b8b;
 }
 
@@ -311,7 +344,7 @@ button {
 
 .statistics-card div:nth-child(even) p:nth-child(odd) {
   background-color: #f9f9f9;
-}
+}*/
 .team_name {
   color: blue;
   font-size: 2rem;

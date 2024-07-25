@@ -43,6 +43,7 @@ function statisticsTemplate(team) {
       </div>
       
     </li>`;
+    
 }
  
 

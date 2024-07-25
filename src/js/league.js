@@ -71,7 +71,35 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (leagueCountries.length > 0 && leagueSeasons.length > 0) {
     filterAndDisplayLeagues(leaguedata.response);
   }
+
+
+
+  [countrySelect, seasonSelect].forEach(select => {
+    select.addEventListener("focus", () => {
+      select.style.boxShadow = "0 0 5px rgba(0, 123, 255, 0.5)";
+      select.style.transform = "scale(1.09)";
+    });
+    select.addEventListener("blur", () => {
+      select.style.boxShadow = "none";
+      select.style.transform = "scale(1)";
+    });
+
 });
+
+
+ // Add event listener for button click effect
+ const displayList = document.querySelector("#displayList");
+ displayList.addEventListener("click", (event) => {
+   if (event.target.closest(".league-card")) {
+     event.target.closest(".league-card").style.backgroundColor = "rgba(0, 123, 255, 0.1)";
+     setTimeout(() => {
+       event.target.closest(".league-card").style.backgroundColor = "";
+     }, 300);
+   }
+ });
+});
+
+
 
 function filterAndDisplayLeagues(leagues) {
   const countrySelect = document.querySelector("#countrySelect");
