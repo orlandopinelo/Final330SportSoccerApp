@@ -6,8 +6,8 @@ const baseURL = import.meta.env.VITE_SERVER_URL;
 //import { leagusdb } from "./leaguedb";
 //import { teamdb } from "./teamdb";
 //import { stats } from "./statisticsdb";
-//import { fixture } from "./fixturedb";
-//import { player } from "./playerdb";
+import { fixture } from "./fixturedb";
+import { player } from "./playerdb";
 
 
    async function convertToJson(res) {
