@@ -789,17 +789,17 @@ footer {
 
 
 
-@media only screen and (min-width: 29rem) {
+ @media only screen and (min-width: 400px) {
   #displayList, #playerdisplayList{
     grid-template-columns: 1fr;
     
   }
   .league-card{
-    font-size: 3.7rem;
+    font-size: 3.5rem;
   }
-}
+} */
 
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 500px) {
   #displayList, #playerdisplayList{
     grid-template-columns: 1fr;
   }
@@ -810,17 +810,17 @@ footer {
 
 
 
-@media only screen and (min-width: 54rem) {
+@media only screen and (min-width: 768px) {
   #displayList,  #playerdisplayList{
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
 }
 .league-card{
-  font-size: 2.3rem;
+  font-size: 3.3rem;
 }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1200px) {
   body {
     max-width: 1080px;
     margin: 0  auto;
