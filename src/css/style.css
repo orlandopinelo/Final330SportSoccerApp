@@ -788,19 +788,36 @@ footer {
 }
 
 
+
 @media only screen and (min-width: 29rem) {
   #displayList, #playerdisplayList{
     grid-template-columns: 1fr;
+    
+  }
+  .league-card{
+    font-size: 3.7rem;
+  }
+}
+
+@media only screen and (min-width: 35rem) {
+  #displayList, #playerdisplayList{
+    grid-template-columns: 1fr;
+  }
+  .league-card{
+    font-size: 3.3rem;
   }
 }
 
 
 
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 54rem) {
   #displayList,  #playerdisplayList{
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-  }
+}
+.league-card{
+  font-size: 2.3rem;
+}
 }
 
 @media only screen and (min-width: 64rem) {
@@ -812,5 +829,9 @@ footer {
   #displayList,  #playerdisplayList{
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin: 0 auto;
+    
+  }
+  .league-card{
+    font-size: 2rem;
   }
 }
