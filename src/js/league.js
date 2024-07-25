@@ -97,7 +97,7 @@ function filterAndDisplayLeagues(leagues) {
     leagueContainer.style.marginBottom = "10px";
 
     const leagueCardLink = document.createElement("a");
-    leagueCardLink.className = "team-card";
+    leagueCardLink.className = "league-card";
     leagueCardLink.href = `../teams/index.html?league=${encodeURIComponent(league.league.id)}&season=${encodeURIComponent(selectedSeason)}`;
 
     const logoLeague = document.createElement("img");

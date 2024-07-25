@@ -2,7 +2,7 @@
   --font-body: Arial, Helvetica, sans-serif;
   --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
   /* colors */
-  --primary-color: #9cb6cf;
+  --primary-color: #f0a868;
   --secondary-color: #525b0f;
   --tertiary-color: #a4b8c4;
   --light-grey: #d0d0d0;
@@ -129,16 +129,29 @@ button {
   list-style-type: none;
   padding: 0;
 }
+
 #displayList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1em;
+  align-items: center;
 }
+
 #displayList a {
   text-decoration: none;
   color: black;
 }
+#teamdisplayList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1em;
+  align-items: center;
+}
 
+#teamdisplayList a {
+  text-decoration: none;
+  color: black;
+}
 .product-list a {
   text-decoration: none;
   color: var(--dark-grey);
@@ -150,31 +163,15 @@ button {
   justify-content: center;
   align-items: center;
   flex: 1 1 45%;
-  margin: 0.25em;
+  
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
+  height: 100%;
   list-style-type: none;
-  border-radius: 5px;
-}
-.league-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 45%;
-  margin: 0.25em;
-  padding: 0.5em;
-  border: 1px solid var(--light-grey);
-  max-width: 250px;
-  list-style-type: none;
-  border-radius: 5px;
+  color: inherit; /* Ensure the text color remains unchanged */
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
   transition: transform 0.3s ease-in-out;
-}
-.league-card:hover {
-  background: linear-gradient(90deg, rgba(52, 124, 184, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
-  transform: translateX(20px); /* Slide to the right on hover */
 }
 
 .filterOptions {
@@ -195,24 +192,6 @@ button {
 .team-card h3,
 .team-card p {
   margin: 0.5em 0;
-}
-
-/* Applying the hover effect only to the 2nd, 3rd, and 4th <a> elements */
-.team-card > a:nth-child(2):hover,
-.team-card > a:nth-child(3):hover,
-.team-card > a:nth-child(4):hover {
-  background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(223, 223, 238) 100%);
-  color: #f8f6f6; /* Change text color on hover if needed */
-  /*transform: translateX(5px); /* Slide effect on hover */
-}
-.team-card a:first-of-type(2):hover{
-  background: linear-gradient(90deg, rgba(178, 186, 199, 0.836) 0%, rgba(253, 253, 253, 0.671) 100%) /* Gradient background */
-  
-}
-
-.team-card:hover {
-  background: linear-gradient(90deg, rgba(70, 101, 158, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
-  /*transform: translateX(20px); /* Slide to the right on hover */
 }
 
 .team img {
@@ -273,44 +252,45 @@ button {
   grid-column: 3;
 }
 .team_stats {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
   border: 1px solid gray;
   padding: 5px;
   margin: 5px;
   width: 125px;
 }
+.team_stats:hover {
+  background: linear-gradient(90deg, rgba(226, 226, 231, 1) 0%, rgba(196, 196, 210, 1) 100%);
+  color: #000; /* Change text color on hover if needed */
+  transform: translateX(5px); /* Slide effect on hover */
+}
+
+/* Applying the hover effect only to the 2nd, 3rd, and 4th <a> elements */
+.team-card > a:nth-child(2):hover,
+.team-card > a:nth-child(3):hover,
+.team-card > a:nth-child(4):hover {
+  background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(223, 223, 238) 100%);
+  color: #000; /* Change text color on hover if needed */
+  transform: translateX(5px); /* Slide effect on hover */
+}
 .team-card a {
   text-align: center;
 }
-
-
+.team-card:hover {
+  background: linear-gradient(90deg, rgba(70, 101, 158, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
+  transform: translateX(20px); /* Slide to the right on hover */
+}
+.team-card a:first-of-type(2):hover{
+  background: linear-gradient(90deg, rgba(178, 186, 199, 0.836) 0%, rgba(253, 253, 253, 0.671) 100%) /* Gradient background */
+  
+}
 .statistics-card,
 .statistics_header {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr 1fr;
-  border: 1px solid gray;
-  
-  
-}
-.statistics-card div p {
-  margin: 0;
-  padding: 10px;
-}
-
-/* Zebra striping */
-.statistics-card div:nth-child(odd) p:nth-child(even) {
-  background-color: #8f8b8b;
-}
-
-.statistics-card div:nth-child(even) p:nth-child(even) {
-  background-color: #8f8b8b;
-}
-
-.statistics-card div:nth-child(odd) p:nth-child(odd) {
-  background-color: #f1f1f1;
-}
-
-.statistics-card div:nth-child(even) p:nth-child(odd) {
-  background-color: #f9f9f9;
 }
 .team_name {
   color: blue;
@@ -320,24 +300,13 @@ button {
 .fixture-card {
   display: grid;
   grid-template-columns: auto auto auto;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 3px;
-
-}
-.fixture-card:hover{
-  background-color: #8cb4e2;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
-  transition: transform 0.9s ease-in-out;
-  transform: translateY(15px); /* Slide to the right on hover */
+  border-bottom: 1px solid gray;
 }
 .fixture-details {
   display: grid;
   place-items: center; /* Center both horizontally and vertically */
   text-align: center; /* Center text inside the elements */
   height: 50%; /* Adjust if needed */
-  
 }
 .team {
   display: grid;
@@ -745,7 +714,52 @@ body {
   font-size: 1.2rem;
   text-align: center;
 }
+/****League stlying*****/
 
+
+/* Add this CSS in your stylesheet */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.league-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.league-card:hover {
+  background-color: #6bc0f157; /* Change this to your preferred hover color */
+  transform: translateX(10px); /* Slide to the right on hover */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+footer {
+  font-size: var(--small-font);
+  padding: 1em;
+}
+
+
+
+
+
+
+/*******Media********************************************/
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -758,9 +772,4 @@ body {
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
   }
-}
-
-footer {
-  font-size: var(--small-font);
-  padding: 1em;
 }

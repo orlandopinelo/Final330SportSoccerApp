@@ -9,9 +9,9 @@ function TeamTemplate(team, idLeague, idSeason) {
         <h2 class="card__name">${team.team.name}</h2>
       </a>
       
-      <a class = "team_stats" href="../fixture/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}"> Fixtures </a>
-      <a class ="team_stats" href="../player/index.html?team=${team.team.id}&season=${idSeason}" > Players</a>
-      <a class = "team_stats" href="../statistics/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}">Statistics</a>
+      <a class = "inside-page__btn inside-page__btn--city"  href="../fixture/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}"> Fixtures </a>
+      <a class ="inside-page__btn inside-page__btn--city" href="../player/index.html?team=${team.team.id}&season=${idSeason}" > Players</a>
+      <a class = "inside-page__btn inside-page__btn--city" href="../statistics/index.html?team=${team.team.id}&season=${idSeason}&league=${idLeague}">Statistics</a>
     </li>`;
 }
  
