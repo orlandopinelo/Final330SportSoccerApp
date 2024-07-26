@@ -5,7 +5,7 @@
   --primary-color: #9cb6cf;
   --secondary-color: #525b0f;
   --tertiary-color: #a4b8c4;
-  --light-grey: #d0d0d0;
+  --light-grey: #646464;
   --dark-grey: #303030;
 
   /* sizes */
@@ -188,6 +188,8 @@ button {
   justify-content: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  font-weight: bold;
+  color: #007BFF;
 }
 /* Style for input focus */
 .filterOptions select:focus {
@@ -803,8 +805,14 @@ footer {
   #displayList, #playerdisplayList{
     grid-template-columns: 1fr;
   }
-  .league-card{
-    font-size: 4.3rem;
+  .league-card span{
+    font-size: 3.4rem;
+  }
+  .filterOptions{
+    font-size: 2rem;
+  }
+  #countrySelect, #seasonSelect{
+    font-size: 3.7rem;
   }
 }
 
@@ -816,8 +824,14 @@ footer {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
 }
-.league-card{
-  font-size: 3.3rem;
+.league-card span{
+  font-size: 2.5rem;
+}
+.filterOptions{
+  font-size: 2.3rem;
+}
+#countrySelect, #seasonSelect{
+  font-size: 3.8rem;
 }
 }
 
@@ -832,8 +846,16 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     margin: 0 auto;
     
+    
   }
-  .league-card{
-    font-size: 2rem;
+  .league-card span{
+    font-size: 2.5rem;
+  }
+  .filterOptions{
+    font-size: 2.5rem;
+
+  }
+  #countrySelect, #seasonSelect{
+    font-size: 3.3rem;
   }
 }
