@@ -33,15 +33,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     ...new Set(
       leaguedata.response
         .map((league) => league.country.name)
-        .filter((name) => name)
+        .filter((name) => name),
     ),
   ].sort((a, b) => a.localeCompare(b));
 
   const leagueSeasons = [
     ...new Set(
       leaguedata.response.flatMap((league) =>
-        league.seasons.map((season) => season.year)
-      )
+        league.seasons.map((season) => season.year),
+      ),
     ),
   ].sort((a, b) => b - a); // Sort in descending order
 
@@ -110,7 +110,7 @@ function filterAndDisplayLeagues(leagues) {
     (league) =>
       league.country.name === selectedCountry &&
       Array.isArray(league.seasons) &&
-      league.seasons.some((season) => season.year === selectedSeason)
+      league.seasons.some((season) => season.year === selectedSeason),
   );
 
   filteredLeagues.forEach((league) => {
@@ -122,7 +122,7 @@ function filterAndDisplayLeagues(leagues) {
     const leagueCardLink = document.createElement("a");
     leagueCardLink.className = "league-card";
     leagueCardLink.href = `../teams/index.html?league=${encodeURIComponent(
-      league.league.id
+      league.league.id,
     )}&season=${encodeURIComponent(selectedSeason)}`;
 
     const logoLeague = document.createElement("img");
@@ -216,8 +216,6 @@ function filterAndDisplayLeagues(leagues) {
 //     filterAndDisplayLeagues(leaguedata.response);
 //   }
 
-
-
 //   [countrySelect, seasonSelect].forEach(select => {
 //     select.addEventListener("focus", () => {
 //       select.style.boxShadow = "0 0 5px rgba(0, 123, 255, 0.5)";
@@ -230,7 +228,6 @@ function filterAndDisplayLeagues(leagues) {
 
 // });
 
-
 //  // Add event listener for button click effect
 //  const displayList = document.querySelector("#displayList");
 //  displayList.addEventListener("click", (event) => {
@@ -242,8 +239,6 @@ function filterAndDisplayLeagues(leagues) {
 //    }
 //  });
 // });
-
-
 
 // function filterAndDisplayLeagues(leagues) {
 //   const countrySelect = document.querySelector("#countrySelect");

@@ -163,14 +163,16 @@ button {
   justify-content: center;
   align-items: center;
   flex: 1 1 45%;
-  
+
   padding: 0.5em;
   border: 1px solid var(--light-grey);
   max-width: 250px;
   height: 100%;
   list-style-type: none;
   color: inherit; /* Ensure the text color remains unchanged */
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out; /* Smooth transition for the background color and transform */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -256,14 +258,20 @@ button {
   margin-top: 10px;
   text-decoration: none;
   color: inherit;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out; /* Smooth transition */
   border: 1px solid gray;
   padding: 5px;
   margin: 5px;
   width: 125px;
 }
 .team_stats:hover {
-  background: linear-gradient(90deg, rgba(226, 226, 231, 1) 0%, rgba(196, 196, 210, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(226, 226, 231, 1) 0%,
+    rgba(196, 196, 210, 1) 100%
+  );
   color: #000; /* Change text color on hover if needed */
   transform: translateX(5px); /* Slide effect on hover */
 }
@@ -272,7 +280,11 @@ button {
 .team-card > a:nth-child(2):hover,
 .team-card > a:nth-child(3):hover,
 .team-card > a:nth-child(4):hover {
-  background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(223, 223, 238) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(253, 253, 253) 0%,
+    rgb(223, 223, 238) 100%
+  );
   color: #000; /* Change text color on hover if needed */
   transform: translateX(5px); /* Slide effect on hover */
 }
@@ -280,12 +292,19 @@ button {
   text-align: center;
 }
 .team-card:hover {
-  background: linear-gradient(90deg, rgba(70, 101, 158, 0.849) 0%, rgba(253, 253, 253, 0.671) 100%); /* Gradient background */
+  background: linear-gradient(
+    90deg,
+    rgba(70, 101, 158, 0.849) 0%,
+    rgba(253, 253, 253, 0.671) 100%
+  ); /* Gradient background */
   transform: translateX(20px); /* Slide to the right on hover */
 }
-.team-card a:first-of-type(2):hover{
-  background: linear-gradient(90deg, rgba(178, 186, 199, 0.836) 0%, rgba(253, 253, 253, 0.671) 100%) /* Gradient background */
-  
+.team-card a:first-of-type(2):hover {
+  background: linear-gradient(
+    90deg,
+    rgba(178, 186, 199, 0.836) 0%,
+    rgba(253, 253, 253, 0.671) 100%
+  ); /* Gradient background */
 }
 .statistics-card,
 .statistics_header {
@@ -716,7 +735,6 @@ body {
 }
 /****League stlying*****/
 
-
 /* Add this CSS in your stylesheet */
 @keyframes slideIn {
   from {
@@ -743,21 +761,10 @@ body {
   padding: 5px;
 }
 
-
-
-
-
-
-
 footer {
   font-size: var(--small-font);
   padding: 1em;
 }
-
-
-
-
-
 
 /*******Media********************************************/
 @media screen and (min-width: 500px) {
