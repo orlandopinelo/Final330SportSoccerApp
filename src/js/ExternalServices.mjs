@@ -21,37 +21,13 @@ export default class ExternalServices {
     
 
   
-  async getLeagueByIdAndSeason (league, season) {
+  async getLeagueByIdAndSeason () {
 
  const teamdbData = teamdb; 
  return teamdbData;
+} 
 
-
-
-    
-  //  const dataLeagueAndSeason = await convertToJson(response);
-  //   return dataLS.Result;
-  
-    // const options = {
-    //                  method: "GET",
-    //                  headers: {
-    //                        "x-rapidapi-key": "f03592658791198d69b990b1526e4f78",
-    //                          "x-rapidapi-host": "v3.football.api-sports.io"
-    //                      }
-    //                };
-
-    //         const response = await fetch(`${baseURL}teams?league=${league}&season=${season}`, options);
-    //         const dataLS = await convertToJson(response);
-    //         return dataLS;
-
-//////https://v3.football.api-sports.io/teams?league=39&season=2024
-  
-  } 
-
-  
-
-
-async getTeamStatistics () {
+  async getTeamStatistics () {
 
  const teamStatisticsData = stats; 
 return teamStatisticsData;
@@ -60,7 +36,7 @@ return teamStatisticsData;
   
     
   
- async fetchFixtures  (team, season, league) { 
+ async fetchFixtures  () { 
 
 const teamFixture = fixture;
 return teamFixture;
@@ -69,7 +45,7 @@ return teamFixture;
 
 
 
-async getPlayers (team, season) {
+async getPlayers () {
 
   const playerdbData = player; 
    return playerdbData;

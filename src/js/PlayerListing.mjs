@@ -17,16 +17,15 @@ function playerTemplate(player) {
                             <div class="card-front">
                                 <div class="card-front__tp card-front__tp--city">
                                  <img src="${playerDetails.photo}" alt="Photo of ${playerDetails.firstname} ${playerDetails.lastname}" class="player-photo">
-
-                               
-                            
+                                 
                             <p class="card-front__text-price">
                                 --------------------------
                             </p>
                                 </div>
 
                                 <div class="card-front__bt">
-                                    <h2 class="card-front__text-view card-front__text-view--city">${playerDetails.firstname} ${playerDetails.lastname}</h2>
+                                    <h2 class="card-front__text-view card-front__text-view--city"></h2>
+                                    
                                     
 
         
@@ -43,6 +42,7 @@ function playerTemplate(player) {
                                     
                                 
                             </div>
+                          
                         </div>
                     </div>
 
@@ -52,12 +52,14 @@ function playerTemplate(player) {
                             <h3 class="inside-page__heading inside-page__heading--city">
                                 Player Statistics
                             </h3>
-                            <p class="inside-page__text">
-                               
-                            </p>
+                            
                             <a href="#" class="inside-page__btn inside-page__btn--city">View deals</a>
+                            <h2 class="card-front__text-view card-front__text-view--city">${playerDetails.firstname} ${playerDetails.lastname}</h2>
+                             <p class="card-front__text-view card-front__text-view--city">${statistics.games.position}</p>
                         </div>
+
                     </div>
+                    <h2 class="card-front__text-view card-front__text-view--city"></h2>
                 </div>
             </section>
 
